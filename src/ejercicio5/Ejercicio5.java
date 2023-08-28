@@ -7,7 +7,6 @@ public class Ejercicio5 {
 
     
     public static void main(String[] args) {
-        int edad;
         
         Persona p1 = new Persona("Juan", "America 1053", "3492593649", 'M', 8, 1, 1989);
         Persona p2 = new Persona();
@@ -22,13 +21,13 @@ public class Ejercicio5 {
         
         
         
-        edad = p1.obtenerEdad(28, 8, 2023);
+       
          
-        //System.out.println("nombre: "+p1.nombre+". Direccion: "+p1.direccion+". Telefono: "+p1.telefono+". Edad: "+edad+".");
+        System.out.println("Nombre: "+p1.getNombre()+". Direccion: "+p1.getDireccion()+". Telefono: "+p1.getTelefono()+". Edad: "+p1.obtenerEdad(28, 8, 2023)+".");
+        System.out.println("Nombre: "+p2.getNombre()+". Direccion: "+p2.getDireccion()+". Telefono: "+p2.getTelefono()+". Edad: "+p2.obtenerEdad(28, 8, 2023)+".");
+        System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
         p1.datosString();
-        System.out.println("la edad es: "+p1.obtenerEdad(28, 8, 2023)+".");
         p2.datosString();
-        System.out.println("la edad es: "+p2.obtenerEdad(28, 8, 2023)+".");
     }
     
 }
