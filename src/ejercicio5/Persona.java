@@ -50,7 +50,7 @@ public class Persona {
     }
     
     public void datosString (){
-        System.out.println("nombre: "+nombre+". Direccion: "+direccion+". Telefono: "+telefono+". Fecha de nacimiento: "+dia+"-"+mes+"-"+anio+".");
+        System.out.println("Nombre: "+getNombre()+". Direccion: "+getDireccion()+". Telefono: "+getTelefono()+". Fecha de nacimiento: "+getDia()+"-"+getMes()+"-"+getAnio()+".");
 
     }
 
