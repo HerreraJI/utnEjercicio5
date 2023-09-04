@@ -1,6 +1,6 @@
-package *;
+package ejercicio5;
 
-
+import java.time.LocalDate;
 public class Vehiculo {
     
     private int cantidadDeRuedas;
@@ -8,14 +8,14 @@ public class Vehiculo {
     private int modelo; //debe estar entre1900 y el año actual
     private int ultimaRTV;
     private String patente;
-    private String tipoVehiculo;
-
-    public Vehiculo(String patente, String tipoVehiculo) {
+    private TipoVehiculo tipoV;
+    //private LocalDate anioHoy = LocalDate.now();
+    public Vehiculo(String patente, TipoVehiculo tipoV) {
         this.patente = patente;
-        this.tipoVehiculo = tipoVehiculo;
+        this.tipoV = tipoV;
     }
-    
-    
+
+      
     //esta vencida si hace mas de dos años que fue hecha
     public boolean laRevisionTecnicaEstaAlDia (int anioRTV, int anioActual){
         
@@ -75,22 +75,12 @@ getTipoVehiculo()+"- Modelo: "+getModelo()+"- Revisión Técnica: "+estado);
         this.patente = patente;
     }
 
-    public String getTipoVehiculo() {
-        return tipoVehiculo;
+    public TipoVehiculo getTipoVehiculo() {
+        return tipoV;
     }
 
-    public void setTipoVehiculo(String tipoVehiculo) {
-        String mensajeERROR = "No es un vehiculo permitidp";
-        switch (tipoVehiculo){
-            case "auto":
-            case "pickup":
-            case "moto":
-            case "camion":
-                this.tipoVehiculo = tipoVehiculo;
-                break;
-            default:
-                System.out.println(mensajeERROR);               
-        }
+    public void setTipoVehiculo(TipoVehiculo tipoV) {
+                this.tipoV = tipoV;
                 
                     
         
