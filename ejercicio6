@@ -1,0 +1,30 @@
+{
+    //Se pide un caracter
+    Console.WriteLine("escriba un caracter alfanumerico: ");
+    string entrada = Console.ReadLine();//se almacena en la variable "entrada"
+    string lower_entrada = entrada.ToLower(); // se transforma a minuscula
+    char letra = lower_entrada[0];// si se ingresa una cadena se toma solo la primer letra
+    int num;// se inicializa una variable int
+
+    if (letra > 'a' & letra < 'z') {
+
+        if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+
+            Console.WriteLine("el caracter ingresado: " + letra + " es una VOCAL");
+
+        }
+        else
+        {
+            Console.WriteLine("el caracter ingresado: " + entrada[0] + " es una CONSONANTE");
+
+        }
+    } else
+    {
+        if (int.TryParse(lower_entrada, out num)){
+            Console.WriteLine("el caracter ingresado: " + entrada[0] + " es un numero");
+        } else
+        {
+            Console.WriteLine("el caracter ingresado: " + entrada[0] + " no es ni un num ni una letra");
+
+        }
+    }
